@@ -7,10 +7,8 @@ describe('<Dashboard', () => {
 	it('Should render 4 buttons', () => {
 		const { getAllByTestId } = render(<Dashboard />);
 
-		const btnNames = getAllByTestId('dashboard-btn').map(
-			btn => btn.textContent,
-		);
+		const buttons = getAllByTestId('dashboard-btn').map(btn => btn.textContent);
 
-		expect(btnNames).toHaveLength(btnNames.length);
+		expect(buttons).toHaveLength(buttons.length);
 	});
 });
